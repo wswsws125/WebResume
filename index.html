@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Document</title>
+
+<!-- 以下为设置整体风格 -->
+<style type="text/css">
+body{
+line-height:24px;
+font:16px Helvetica, Sans-Serif;
+background: url(images/bg.jpg);}
+/* 设置背景图片：创建一个 images文档，保存在和html平行的位置，储存网页的所有图像元素*/
+/* 找seamless images 利于平铺*/
+/* 12px是读者能看的最小字体了 */
+/* serif or decorative font:便于阅读。san-serif不用看的部分用这个*/
+
+/* #is used to target div with custom id */
+#page-wrap{
+  width:800px;
+  margin:40px auto 60px/* 设置出血值，上下左右margin. */
+
+}
+#pic{
+  float:right;
+  margin:-30px 0 0 0;
+  /* top right bottom left将图片换到右边？？ */
+}
+
+h1{
+  /* 设置h1格式 */
+color:rgb(0, 97, 127);/*red green blue, use Adobecolor*/
+margin:0 0 16px 0;
+padding:0 0 16px 0;
+font-size:42px;
+font-weight:bold;
+letter-spacing: -2px;
+border-bottom: 1px solid #999;/*设置下方分界线*/
+}
+
+a{
+  /* 设置超链接格式 */
+  color:rgb(0,154,204)；
+    border-bottom:1px dotted;
+    text-decoration: none;
+}
+
+a:hover{
+  /*设置悬浮格式*/
+  border-bottom-style:solid;
+  color:black;
+}
+
+ul{
+margin:0 0 32px 17px;
+}
+
+li{
+  color:rgb(38,106,127);
+}
+
+</style>
+
+</head>
+<body>
+  <div id="page-wrap">
+    <img src="images/profile.gif" width="200" height="auto" id="pic">
+    <!-- ↑插入图片 设置宽度，高度会按照比例自动调整-->
+<h1>CZ</h1>
+<p>
+ Portfolio:<a href="http://zhenzhenqi.com">zhangcan.com</a>
+ <!-- this is a note 输入注释内容，并按下ctrl+/即可成为注释。标注在括号里面。或者自己输入两边的符号-->
+<!-- br/表示换行(linebreak)。单个出现不需要sandwich -->
+ <br/>Email:<a href="mailto:zhenzhenqi@gmail.com">zhenzhenqi@gmail.com</a>
+ <!-- 前括号里面是要go for的地址。括号后面的是显示内容。 -->
+
+<div>
+<h1>Education</h1>
+<h2>Wrote a cyber fiction on pissing in the universe</h2>
+<p><strong>Major:</strong>Public Finance<br/>
+  <strong>Minor:</strong>Daydream</p>
+  <!-- p代表paragraph -->
+  <!-- strong代表粗体 -->
+<!-- A shortcut:输入h2，再按tab，会自动出现两端括号代码。 -->
+  <!-- h2表示subtitle -->
+</div>
+
+<div>
+<h1>Skills</h1>
+<h2>Office Skills</h2>
+<p>Adobe Photoshop, </p>
+
+<h2>Computer Skills</h2>
+<p>HTML, CSS Javascript, C#</p>
+
+</div>
+
+<div>
+<h1>Experience</h1>
+<h2>Super Mario Odyssey Overload</h2>
+<ol>
+  <!-- 输入li*3，再按tab，出现三行指令 -->
+<li>like to eat mushroom</li>
+<li>cannot clear the first kingdom</li>
+<li>considering about change another game</li>
+<!-- ctrl+tab可以切换窗口 -->
+<!-- ul means unordered list; ol means ordered list -->
+
+
+</ol>
+
+</div>
+
+  </p>
+  <div>
+  </body>
+  </html>
