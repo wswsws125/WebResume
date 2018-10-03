@@ -1,148 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
-<!-- 以下为设置整体风格 -->
-<style type="text/css">
-body{
-line-height:24px;
-font:16px Cambria, Serif;
-background: url(images/bg3.jpg);}
-/* 设置背景图片：创建一个 images文档，保存在和html平行的位置，储存网页的所有图像元素*/
-/* 找seamless images 利于平铺*/
-/* 12px是读者能看的最小字体了 */
-/* serif or decorative font:便于阅读。san-serif不用看的部分用这个*/
-
-/* #is used to target div with custom id */
-#page-wrap{
-  width:800px;
-  margin:40px auto 60px/* 设置出血值，上下左右margin. */
-
-}
-#pic{
-  float:center;
-  margin:-30px 0 0 0;
-  /* top right bottom left将图片换到右边？？ */
-}
-
-h1{
-  /* 设置h1格式 */
-color:rgb(9, 141, 103);/*red green blue, use Adobecolor*/
-margin:0 0 16px 0;
-padding:0 0 16px 0;
-font-size:38px;
-font-weight:bold;
-letter-spacing: -2px;
-border-bottom: 1px solid #999;/*设置下方分界线*/
-}
-
-h2{
-  font-size: 20px;
-}
-
-h3{
-  font-size: 16px;
-}
-
-a{
-  /* 设置超链接格式 */
-  color:rgb(2,115,154)；
-    border-bottom:1px dotted;
-    text-decoration: none;
-}
-
-a:hover{
-  /*设置悬浮格式*/
-  border-bottom-style:solid;
-  color:black;
-}
-
-ul{
-margin:0 0 32px 17px;
-}
-
-li{
-  color:rgb(2,164,163);
-}
-
-</style>
-
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="custom.css">
+  <!-- 最后一行是引入自己写的css，前两行是引入其他library -->
+  <!-- 在此 link另一个文件夹，作为stylesheet-->
+  <!-- 创建一个link以引入全部free icons -->
+  <!-- 创建一个link以引入一种fonts-->
+  <!-- 以下为设置整体风格 -->
 </head>
+
+<a name="home">
 <body>
-  <div id="page-wrap">
-    <img src="images/pixelavatar96.png" width="100" height="auto" id="pic">
-    <!-- ↑插入图片 设置宽度，高度会按照比例自动调整-->
-<h1>Can Zhang</h1>
-<p>
- Portfolio: <a href="http://zhenzhenqi.com">zhangcan.com</a>
- <!-- 注释方法：输入注释内容，并按下ctrl+/即可成为注释。标注在括号里面。或者自己输入两边的符号-->
-<!-- br/表示换行(linebreak)。单个出现不需要sandwich -->
- <br/>Email: <a href="mailto:cz2523@tc.columbia.edu">cz2523@tc.columbia.edu</a>
- <!-- 前括号里面是要go for的地址。括号后面的是显示内容。 -->
 
-<div>
-<h1>Education</h1>
-<h2>University & Major</h2>
-<p><strong>University:</strong>Zhejiang University <br/>
-  Columbia University Teachers College <br>
-  <strong>Major:</strong> Public Finance <br>
-  Instructional Technology and Media <br>
-    <strong> Minor:</strong>English<br>
-    <strong> Courses:</strong>Public Policy, Government Budget Management, Tax Planning, Economic Statistical Software and Applications, Public Debt, Topics on the Public Economics Forefront, Intermediate Econometrics</p>
-</p>
-  <!-- p代表paragraph -->
-  <!-- strong代表粗体 -->
-<!-- A shortcut:输入h2，再按tab，会自动出现两端括号代码。 -->
-  <!-- h2表示subtitle -->
-</div>
+ <div class="container text-center" text-align=center>
+    <!-- 这些 class，比如container, row等，已经写好了，在引入的css里-->
+    <h1>I'm Can.</h1>
+  </br>
+    <h2 text-align=center;><i class="fab fa-envira"></i> This is my blog for creation.</h2>
 
-<div>
-<h1>Skills</h1>
-<h2>Office Skills</h2>
-<p>Microsoft Softwares</p>
+  </div>
 
-<h2>Computer Skills</h2>
-<p>Adobe Photoshop, Java, Javascript</p>
+
+  <div class="index">
+      <a href="#blog"><button type="button" class="btn btn-light">BLOG</button></a>
+<a href="#about"><button type="button" class="btn btn-light">ABOUT</button></a>
+<a href="#contact"><button type="button" class="btn btn-light">CONTACT</button></a>
+
+</br>
+</br>
+</br>
 
 </div>
-
-<div>
-<h1>Experience</h1>
-<h2>Professional Experience</h2>
-<h3>Foxconn Zhengzhou science and Technology Park</h3>
-<ul>
-  <!-- 输入li*3，再按tab，出现三行指令 -->
-<li>Helped receive candidates and provided consultancy services in the interview part</li>
-<li>Visited the iphone production workshop</li>
-<li>Studied the government support policies and the company’s employment situation and assisted colleagues in collecting and filing policy documents</li>
-</ul>
-
-<h2>Extracurriculum Experience</h2>
-<h3>Minister, Publicity Department of Student Union</h3>
-<ul>
-  <li>Led 14 department members to do the general publicity, mascot and promotional material design of MIX Festival of Student Union, and perfected the rules and regulations of the department</li>
-  <li>Completed the reorganization and merger of Publicity Department and News Network Department</li>
-  <li>Organized the activities of photoshop contest, orienteering activity and NetEase company visit</li>
-</ul>
-<!-- ctrl+tab可以切换窗口 -->
-<!-- ul means unordered list; ol means ordered list -->
-
-<h2>Research Experience</h2>
-<ul>
-<li>Financial Research on Housing Fund Securitization </li>
-<li>Research on China Local Bond Issuance and Bond Replacement</li>
-<li>Relationship between Deferred Income Tax and Earnings Management</li>
-
-</ul>
+<a>
 
 
+<div class="body1">
+  <a name="blog"><h3><strong>MY BLOG</strong></h3></a>
+  <hr />
+  <h4><strong>My Project Introduction 01</strong></h4>
+  <h6>Oct/02/2018</h6>
+
+<CENTER>  <img class="rounded person" src="images/webrsm01.png" width=800px ></CENTER>
+  <div class="col">
+    <p class="blog">  I wanted to design a simple blog home page to present a set of information including my blog, about and contact. I make a navigation for each section on the home page and a ‘home’ button fixed at the bottom of the page to return the home page. On the whole, I try to create a simple, quiet atmosphere and try to make it look beautiful. The target audience of this page is those who want to browse information quickly.</p>
+<p class="blog"> So far, I have read most of the utilities about bootstrap4 at w3school, and I have considered whether to put these features on my personal homepage. For example, I once added a navigation bar to my homepage. I found this feature useful for quickly searching for specific content, but it didn't look like the theme I wanted, so I ended up not using it.</p>
+<p class="blog"> To realize webpage navigation, I adopted button and fixed-bottom functions. I arrange three buttons of 'btn-light' types horizontally as the navigation of the page. I added the 'HOME' hyperlink text and fixed it at the bottom of the page to return to the HOME page at any time. I also added an effect with which the block's background will turn gray when the mouse hovers over it. After I done below, the webpage still looks as clean as I intended.</p>
+<p class="blog"> In the process of coding and learning, when I encounter some knowledge I did not know before, I will check on w3school.com, there are many tutorials for my reference. In the adjustment and modification of the design, I change the code to see the results again and again. Because every time I change the code and run it, there will be timely feedback on the browser so that I can see if the change happened. This kind of timely inspection also helps me to better understand the meaning of the code.</p>
+<p class="blog"> To further develop my project, I plan to add more interactive or animation features. I will pay more attention to these functions in my future study.
+    </p>
+  </div>
 </div>
 
-  </p>
-  <div>
-  </body>
-  </html>
+<div class="body1">
+  <a name="about"><h3><strong>ABOUT</strong></h3></a>
+  <hr />
+  <CENTER><img class="rounded-circle person" src="images/cat1.png" width=200px>  </CENTER>
+
+      <h6>My Cat</h6>
+
+      <div class="row">
+        <div class="col">
+          <h2>Education</h2>
+          <p><strong>University:</strong>Zhejiang University <br/>
+Columbia University Teachers College <br>
+            <strong>Major:</strong> Public Finance <br>
+Instructional Technology and Media <br>
+            <strong> Minor:</strong>English<br>
+            <strong> Courses:</strong>Public Policy, Government Budget Management, Tax Planning, Economic Statistical Software and Applications, Public Debt, Topics on the Public Economics Forefront, Intermediate Econometrics</p>
+          </p>
+        </div>
+
+        <div class="col">
+          <div class="row1">
+            <h2>Interests</h2>
+            <p><strong>Games:</strong> RPG, horror, collection<br/>
+              <strong>Music:</strong> Hip-Hop, electric, piano <br>
+              <strong>Movie:</strong> suspense movies
+            </p>
+          </div>
+
+          <div class="row1">
+            <h2>Skills</h2>
+            <p>Adobe Photoshop, Java, HTML, CSS</p>
+          </div>
+        </div>
+
+
+        <div class="col">
+          <h2>Experience</h2>
+          <p><strong>Minister, Publicity Department of Student Union</strong></p>
+          <ul>
+            <li>Led 14 department members to do the general publicity, mascot and promotional material design of MIX Festival of Student Union, and perfected the rules and regulations of the department.</li>
+
+        </div>
+      </div>
+        </div>
+
+      <div class="body1">
+        <a name="contact"><h3><strong>CONTACT</strong></h3></a>
+        <hr />
+        <div class="row">
+          <!-- /<div><img class="rounded-circle person"src="images/mew1.png" height=200px></div> -->
+          <div class="col">
+            <p> <i class="far fa-address-card fa-lg"></i>Portfolio: <a href="http://zhenzhenqi.com">zhangcan.com</a></p>
+            <p><i class="fab fa-android fa-lg"></i>Email: <a href="mailto:cz2523@tc.columbia.edu">cz2523@tc.columbia.edu</a></p>
+            <p> <i class="fab fa-alipay fa-lg"></i>Tel: 18803716657</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="footcontainer text-center fixed-bottom">
+        <a href="#home"><p style="color:grey;">HOME</p><a>
+    </div>
+
+      <div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+
+h1{
+    color: black;
+    text-align: center;
+    text-decoration:overline;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 120px;
+}
+
+h2{
+    color: black;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 35px;
+    text-decoration:;
+}
+
+h3{
+  text-align: center;
+  padding-top: 20px;
+  margin-bottom: 20px;
+}
+h4{
+    text-align: center;
+}
+h6{
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  color: black;
+}
+
+div{
+  padding-bottom: 20px;
+}
+
+
+a{
+  color:black;
+  font-size: 16px;
+}
+
+p{
+  font-size: 16px;
+}
+
+.body1:hover{
+  background:#f1f1f1;
+}
+
+.index {
+    text-align:center;
+    padding-top: 50px;
+    padding-bottom:120px;
+}
+.blog{
+  padding-right:100px;
+  padding-left:100px;
+  text-indent:2em;
+
+}
+
+.row{
+    text-align:left;
+    padding:50px;
+    padding-top: 10px;
+}
+
+.row1{
+    text-align:left;
+    padding-top: 0px;
+}
+.col{
+padding-top: 0px;
+  marging-top: 0px;
+}
+.container{
+  margin-top: 100px;
+ padding:20px;
+ text-align:center;
+}
+
+.footcontainer{
+ margin:0 auto;
+  padding:20px;
+ text-align:center;
+}
+
+.person{
+border:10px solid transparent;
+margin-bottom:25px;
+height:80%;
+opacity:0.9;
+
+}
+
+.person:hover{
+  border-color:#f1f1f1;
+}
+.center {
+    margin: 0 auto;
+    width: 60%;
+    padding: 10px;
+}
+
+#demo{
+  padding-bottom: 50px;
+}
