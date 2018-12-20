@@ -1,39 +1,32 @@
+<!DOCTYPE html>
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-  <link rel="icon" href="images/monsters/7.png">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="rpg-awesome.css">
+  <title>Mini Game</title>
+  <script src="processing.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
 </head>
 
+<body>
+  <h1>Collect the Coin!</h1>
+  <h3>Control the character by arrow keys and enjoy it!</h3>
+  <canvas data-processing-sources="maze0.pde"></canvas>
 
-  <body>
-    <h2>Magic Tower</h2>
+  <br>
 
-
-    <div>
-    <h3>Monster's Health <span id="mon-health"></span></h3>
-    <h3>Your Health <span id="player-health"></span></h3>
-</div>
-
-    <div>
-    <img id="card" class="monsterCard" src="images/monsters/1.png" width=200px >
+  <div class="row">
+    <!-- /<div><img class="rounded-circle person"src="images/mew1.png" height=200px></div> -->
+    <div class="col">
+      <p> <i class="fab fa-github fa-lg"></i>  Github: <a href="https://github.com/wswsws125/MSTU5003Project">wswsws125 |</a>
+        <i class="fas fa-envelope-square fa-lg"></i>  Email: <a href="mailto:cz2523@tc.columbia.edu">cz2523@tc.columbia.edu |</a>
+        <i class="fab fa-alipay fa-lg"></i>  Tel: +86 18803716657</p>
     </div>
-      <h3>Monster: <span id="mon-name"></span></h3>
 
-<div>
-    <button id="attack-button" onclick="attack()">Hit it</button>
-    <button id="change-button" onclick="change()">Change Opponent</button>
-    <button id="restart-button" hidden="true" onclick="restart()">Restart Game</button>
   </div>
 
-    <h3 id="game-message"></h3>
-  </body>
-
-  <script src="fight.js">  </script>
-    <script src="monster.js">  </script>
+</body>
 
 </html>
