@@ -1,32 +1,899 @@
+﻿
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <title>Mini Game</title>
-  <script src="processing.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+	<meta charset="UTF-8">
+
+	<link type="text/css" rel="stylesheet" href="css/common.css">
+	<link type="text/css" rel="stylesheet" href="css/style.css">
+
+
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+
+
+	<title>EduAppNavigation</title>
 </head>
 
 <body>
-  <h1>Collect the Coin!</h1>
-  <h3>Control the character by arrow keys and enjoy it!</h3>
-  <canvas data-processing-sources="maze0.pde"></canvas>
+	<div class="wrapper">
+		<div class="header">
+			<div class="nav">
 
-  <br>
+				<ul class="menu" id="headline">
+					<li class="li_2018 current">
+						<a href="#headline" class="current">Home</a></li>
+					<li class="li_2018">
+						<a class="bind_menu_a" href="#" data-layerid="layer1">Basic Category</a>
+					</li>
+					<li class="li_2018">
+						<a class="bind_menu_a" href="#" data-layerid="layer2">Subjects</a>
+					</li>
+					<li class="li_2018">
+						<a class="bind_menu_a" href="#" data-layerid="layer3">Age</a>
+					</li>
+					<li class="li_2018">
+						<a class="bind_menu_a" href="#" data-layerid="layer4">Price</a>
+					</li>
+					<li class="li_2018">
+						<a class="bind_menu_a" href="#" data-layerid="layer5">Popular Tags</a>
+					</li>
+					<li class="li_2018">
+					<a class="bind_menu_a" href="#" data-layerid="layer6">Country</a>
+				</li>
+				<li class="li_2018">
+				<a class="bind_menu_a" href="#" data-layerid="layer7">More+</a>
+			</li>
+				</ul>
 
-  <div class="row">
-    <!-- /<div><img class="rounded-circle person"src="images/mew1.png" height=200px></div> -->
-    <div class="col">
-      <p> <i class="fab fa-github fa-lg"></i>  Github: <a href="https://github.com/wswsws125/MSTU5003Project">wswsws125 |</a>
-        <i class="fas fa-envelope-square fa-lg"></i>  Email: <a href="mailto:cz2523@tc.columbia.edu">cz2523@tc.columbia.edu |</a>
-        <i class="fab fa-alipay fa-lg"></i>  Tel: +86 18803716657</p>
+				<!-- Basic Category -->
+				<div class="sub_menu bind_menu_a" id="layer1" data-layerid="layer1" style="display: none;">
+					<i></i>
+					<div class="sub_area clearfix">
+						<ul class="sub_nav list">
+							<li class="li_2018" id="li-two" ><a href="#skillApp">Skill-Based Apps</a></li>
+							 <jsp:include page="aboutCompany.jsp"/>
+						</ul>
+						<ul class="sub_nav list">
+							<li class="li_2018"><a href="#contentApp">Content-Based Apps</a></li>
+						</ul>
+						<ul class="sub_nav list">
+							<li class="li_2018"><a href="#functionApp">Function-Based Apps</a></li>
+						</ul>
+						<ul class="sub_nav list">
+							<li class="li_2018"><a href="#experienceApp">Expience-Based Apps</a></li>
+						</ul>
+						<ul class="sub_nav list">
+							<li class="li_2018"><a href="comprehensiveApp">Comprehensive Apps</a></li>
+						</ul>
+						<!-- <ul class="sub_nav list">
+						<li class="li_2018"><a href="">公告信息1</a></li>
+					</ul>
+					<ul class="sub_nav list">
+						<li class="li_2018"><a href="">公告信息1</a></li>
+					</ul> -->
+						<!-- <ul class="sub_nav list sub_ad">
+							<li class="li_2018"><a title="" alt="" href=""><img src="static/W020130317408372503732.gif" width="190" height="60"></a></li>
+						</ul> -->
+					</div>
+				</div>
+
+				<!-- Subjects -->
+				<div class="sub_menu bind_menu_a" id="layer2" data-layerid="layer2" style="display: none;">
+					<i></i>
+					<div class="sub_area clearfix">
+						<ul class="sub_nav list">
+							<li class="li_2018"><a href="">Literacy</a></li>
+						</ul>
+						<ul class="sub_nav list">
+							<li class="li_2018"><a href="">English</a></li>
+						</ul>
+						<ul class="sub_nav list">
+							<li class="li_2018"><a href="">Math</a></li>
+						</ul>
+						<ul class="sub_nav list">
+							<li class="li_2018"><a href="">Science</a></li>
+						</ul>
+						<ul class="sub_nav list">
+							<li class="li_2018"><a href="">Living Skills</a></li>
+						</ul>
+						<ul class="sub_nav list">
+							<li class="li_2018"><a href="">Japanese</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- Age -->
+				<div class="sub_menu bind_menu_a" id="layer3" data-layerid="layer3" style="display: none;">
+					<i></i>
+					<div class="sub_area clearfix">
+						<ul class="sub_nav list">
+							<li class="li_2018"><a href="">0-4</a></li>
+						</ul>
+						<ul class="sub_nav list">
+							<li class="li_2018"><a href="">4-12</a></li>
+						</ul>
+						<ul class="sub_nav list">
+							<li class="li_2018"><a href="">12-15</a></li>
+						</ul>
+						<ul class="sub_nav list">
+							<li class="li_2018"><a href="">15+</a></li>
+						</ul>
+						<!-- <ul class="sub_nav list sub_ad">
+							<li class="li_2018"><a title="" alt="" href=""><img src="static/W020130317408372503732.gif" width="190" height="60"></a></li>
+						</ul> -->
+					</div>
+				</div>
+
+				<!-- Price -->
+				<div class="sub_menu bind_menu_a" id="layer4" data-layerid="layer4" style="display: none;">
+					<i></i>
+					<div class="sub_area clearfix">
+						<ul class="sub_nav list">
+							<li class="li_2018"><a href="">Free</a></li>
+						</ul>
+						<ul class="sub_nav list">
+							<li class="li_2018"><a href="">Paid</a></li>
+						</ul>
+						<!-- <ul class="sub_nav list sub_ad">
+							<li class="li_2018"><a title="" alt="" href=""><img src="static/W020130317408372503732.gif" width="190" height="60"></a></li>
+						</ul> -->
+					</div>
+				</div>
+
+				<!-- Popular tags -->
+				<div class="sub_menu bind_menu_a" id="layer5" data-layerid="layer5" style="display: none;">
+					<i></i>
+					<div class="sub_area clearfix">
+						<ul class="sub_nav list">
+							<li class="li_2018"><a href="">Game</a></li>
+						</ul>
+						<ul class="sub_nav list">
+							<li class="li_2018"><a href="">Test Preparation</a></li>
+						</ul>
+						<!-- <ul class="sub_nav list sub_ad">
+							<li class="li_2018"><a title="" alt="" href=""><img src="static/W020130317408372503732.gif" width="190" height="60"></a></li>
+						</ul> -->
+					</div>
+				</div>
+
+<!-- country -->
+				<div class="sub_menu bind_menu_a" id="layer6" data-layerid="layer6" style="display: none;">
+
+				<div class="sub_area clearfix">
+					<ul class="sub_nav list">
+						<li class="li_2018"><a href="#JapanApp">Japanese Game</a></li>
+					</ul>
+					<ul class="sub_nav list">
+						<li class="li_2018"><a href="USApp">American Games</a></li>
+					</ul>
+
+				</div>
+			</div>
+
+				<div class="sub_menu bind_menu_a" id="layer7" data-layerid="layer7" style="display: none;">
+				<i></i>
+				<div class="sub_area clearfix">
+					<ul class="sub_nav list">
+						<li class="li_2018"><a href="#tipsFor">Tips for Game Developer</a></li>
+					</ul>
+					<ul class="sub_nav list">
+						<li class="li_2018"><a href="#resource">Resource</a></li>
+					</ul>
+
+				</div>
+			</div>
+
+
+			</div>
+		</div>
+	</div>
+
+
+	<!--右侧主体内容 用bootstrap的content类包含在一起-->
+    <div class="content">
+        <div id="matter1" >
+            <!--引入外部文件，即需要在右侧加载的内容-->
+
+        </div>
+
+        <div id="matter2" style="display: none">
+
+        </div>
+
+        <!--
+            ...........中间的都一样的，只不过加载的文件不一样而已
+        -->
+        <div id="matter10" style="display: none">
+            <jsp:include page="salaryAccount.jsp"/>
+        </div>
+
+        <div id="matter11" style="display: none">
+            <jsp:include page="summaryBills.jsp"/>
+        </div>
     </div>
 
-  </div>
+
+
+
+	<!-- rankings -->
+
+	<div data-v-4af873a2="" 	style="text-align: center;" class="outsideframe" >
+
+		<ul data-v-4af873a2="" >
+			<li data-v-4af873a2="" class="top-item">
+				<div data-v-4af873a2="" class="info-wrap">
+					<h1 data-v-4af873a2="" class="title-item">Top 10 Kids Education Apps</h1>
+				</div>
+				<div data-v-4af873a2="" class="link-wrap"><a data-v-4af873a2="" href="/rank/rankTrend/brand/free/country/cn/genre/6061/device/iphone" class="rank-trend-item" target="_blank"><i data-v-4af873a2=""
+							class="icon iconfont icon-22fenbuquxiantu"></i>
+
+					</a><a data-v-4af873a2="" href="/rank/index/brand/free/country/cn/genre/6061/device/iphone" class="more-item">
+
+						<i data-v-4af873a2="" class="icon iconfont icon-xiayiye"></i></a></div>
+			</li>
+
+
+			<li data-v-4af873a2="" class="child-item">
+				<div data-v-4af873a2="" class="ivu-row">
+					<div data-v-4af873a2="" class="ivu-col ivu-col-span-3 left-item" style="padding-left: 16px; padding-right: 16px;">
+					<h2 data-v-4af873a2="" class="index-1">1</h2>
+					</div>
+					<div data-v-4af873a2="" class="ivu-col ivu-col-span-16 center-item" style="padding-left: 16px; padding-right: 16px;">
+						<div data-v-4af873a2="" class="app-info"><a data-v-4af873a2="" href="/app/rank/appid/928864273/country/cn" target="_blank"><img data-v-4af873a2="" alt="叽里呱啦-专注儿童英语早教启蒙" class="icon"
+									data-src="https://is2-ssl.mzstatic.com/image/thumb/Purple113/v4/dc/55/ad/dc55ad94-4120-035d-0ea5-4e9f708e2190/source/100x100bb.jpg"
+									src="https://is2-ssl.mzstatic.com/image/thumb/Purple113/v4/dc/55/ad/dc55ad94-4120-035d-0ea5-4e9f708e2190/source/100x100bb.jpg" lazy="loaded"></a>
+							<div data-v-4af873a2="" class="info-content">
+								<p data-v-4af873a2="" class="medium-txt"><a data-v-4af873a2="" href="/app/rank/appid/928864273/country/cn" target="_blank">叽里呱啦-专注儿童英语早教启蒙</a></p>
+							</div>
+						</div>
+					</div>
+					<div data-v-4af873a2="" class="ivu-col ivu-col-span-5 right-item" style="padding-left: 16px; padding-right: 16px;">
+						<div data-v-4af873a2="" class="row-rank-item">
+							<!---->
+							<!---->
+							<!---->
+						</div>
+					</div>
+				</div>
+			</li>
+
+
+			<li data-v-4af873a2="" class="child-item">
+				<div data-v-4af873a2="" class="ivu-row">
+					<div data-v-4af873a2="" class="ivu-col ivu-col-span-3 left-item" style="padding-left: 16px; padding-right: 16px;"><h2 data-v-4af873a2="" class="index-2">2</h2></div>
+					<div data-v-4af873a2="" class="ivu-col ivu-col-span-16 center-item" style="padding-left: 16px; padding-right: 16px;">
+						<div data-v-4af873a2="" class="app-info"><a data-v-4af873a2="" href="/app/rank/appid/1203189645/country/cn" target="_blank"><img data-v-4af873a2="" alt="伴鱼绘本-少儿英语配音儿童故事大全" class="icon"
+									data-src="https://is2-ssl.mzstatic.com/image/thumb/Purple113/v4/20/02/19/20021918-c0a1-8863-cc0a-92252cca0112/AppIcon-1x_U007emarketing-85-220-6.jpeg/180x180bb.png"
+									src="https://is2-ssl.mzstatic.com/image/thumb/Purple113/v4/20/02/19/20021918-c0a1-8863-cc0a-92252cca0112/AppIcon-1x_U007emarketing-85-220-6.jpeg/180x180bb.png" lazy="loaded"></a>
+							<div data-v-4af873a2="" class="info-content">
+								<p data-v-4af873a2="" class="medium-txt"><a data-v-4af873a2="" href="/app/rank/appid/1203189645/country/cn" target="_blank">伴鱼绘本-少儿英语配音儿童故事大全</a></p>
+							</div>
+						</div>
+					</div>
+
+					<div data-v-4af873a2="" class="ivu-col ivu-col-span-5 right-item" style="padding-left: 16px; padding-right: 16px;">
+						<div data-v-4af873a2="" class="row-rank-item"><span data-v-4af873a2="" title="相比昨日总榜榜上升2" class="up-item"><span data-v-4af873a2="" class="rank-arrow"><i data-v-4af873a2="" class="ivu-icon ivu-icon-arrow-up-b"></i></span><span
+									data-v-4af873a2="" class="change-text"></span></span>
+							<!---->
+							<!---->
+						</div>
+					</div>
+
+				</div>
+			</li>
+			<li data-v-4af873a2="" class="child-item">
+				<div data-v-4af873a2="" class="ivu-row">
+					<div data-v-4af873a2="" class="ivu-col ivu-col-span-3 left-item" style="padding-left: 16px; padding-right: 16px;"><h2 data-v-4af873a2="" class="index-3">3</h2></div>
+					<div data-v-4af873a2="" class="ivu-col ivu-col-span-16 center-item" style="padding-left: 16px; padding-right: 16px;">
+						<div data-v-4af873a2="" class="app-info"><a data-v-4af873a2="" href="/app/rank/appid/1278795670/country/cn" target="_blank"><img data-v-4af873a2="" alt="宝宝巴士儿歌-学前经典儿歌和故事" class="icon"
+									data-src="https://is5-ssl.mzstatic.com/image/thumb/Purple123/v4/b9/a1/8a/b9a18a9d-eeab-8791-8161-319135e9c41e/source/100x100bb.jpg"
+									src="https://is5-ssl.mzstatic.com/image/thumb/Purple123/v4/b9/a1/8a/b9a18a9d-eeab-8791-8161-319135e9c41e/source/100x100bb.jpg" lazy="loaded"></a>
+							<div data-v-4af873a2="" class="info-content">
+								<p data-v-4af873a2="" class="medium-txt"><a data-v-4af873a2="" href="/app/rank/appid/1278795670/country/cn" target="_blank">宝宝巴士儿歌-学前经典儿歌和故事</a></p>
+							</div>
+						</div>
+					</div>
+					<div data-v-4af873a2="" class="ivu-col ivu-col-span-5 right-item" style="padding-left: 16px; padding-right: 16px;">
+						<div data-v-4af873a2="" class="row-rank-item">
+							<!---->
+							<!---->
+							<!---->
+						</div>
+					</div>
+				</div>
+			</li>
+			<li data-v-4af873a2="" class="child-item">
+				<div data-v-4af873a2="" class="ivu-row">
+					<div data-v-4af873a2="" class="ivu-col ivu-col-span-3 left-item" style="padding-left: 16px; padding-right: 16px;"><h2 data-v-4af873a2="" class="index-4">4</h2></div>
+					<div data-v-4af873a2="" class="ivu-col ivu-col-span-16 center-item" style="padding-left: 16px; padding-right: 16px;">
+						<div data-v-4af873a2="" class="app-info"><a data-v-4af873a2="" href="/app/rank/appid/894495836/country/cn" target="_blank"><img data-v-4af873a2="" alt="儿歌多多-听故事看动画片玩游戏" class="icon"
+									data-src="https://is4-ssl.mzstatic.com/image/thumb/Purple113/v4/4e/a9/81/4ea98184-0bd9-47af-873a-e3a84d60cc80/source/100x100bb.jpg"
+									src="https://is4-ssl.mzstatic.com/image/thumb/Purple113/v4/4e/a9/81/4ea98184-0bd9-47af-873a-e3a84d60cc80/source/100x100bb.jpg" lazy="loaded"></a>
+							<div data-v-4af873a2="" class="info-content">
+								<p data-v-4af873a2="" class="medium-txt"><a data-v-4af873a2="" href="/app/rank/appid/894495836/country/cn" target="_blank">儿歌多多-听故事看动画片玩游戏</a></p>
+							</div>
+						</div>
+					</div>
+					<div data-v-4af873a2="" class="ivu-col ivu-col-span-5 right-item" style="padding-left: 16px; padding-right: 16px;">
+						<div data-v-4af873a2="" class="row-rank-item"><span data-v-4af873a2="" title="相比昨日总榜榜上升3" class="up-item"><span data-v-4af873a2="" class="rank-arrow"><i data-v-4af873a2="" class="ivu-icon ivu-icon-arrow-up-b"></i></span><span
+									data-v-4af873a2="" class="change-text"></span></span>
+							<!---->
+							<!---->
+						</div>
+					</div>
+				</div>
+			</li>
+			<li data-v-4af873a2="" class="child-item">
+				<div data-v-4af873a2="" class="ivu-row">
+					<div data-v-4af873a2="" class="ivu-col ivu-col-span-3 left-item" style="padding-left: 16px; padding-right: 16px;"><h2 data-v-4af873a2="" class="index-5">5</h2></div>
+					<div data-v-4af873a2="" class="ivu-col ivu-col-span-16 center-item" style="padding-left: 16px; padding-right: 16px;">
+						<div data-v-4af873a2="" class="app-info"><a data-v-4af873a2="" href="/app/rank/appid/998790080/country/cn" target="_blank"><img data-v-4af873a2="" alt="凯叔讲故事—儿童早教启蒙睡前故事大全" class="icon"
+									data-src="https://is4-ssl.mzstatic.com/image/thumb/Purple113/v4/ba/57/34/ba573425-ffcc-bd2a-a243-a6c4534308b9/source/100x100bb.jpg"
+									src="https://is4-ssl.mzstatic.com/image/thumb/Purple113/v4/ba/57/34/ba573425-ffcc-bd2a-a243-a6c4534308b9/source/100x100bb.jpg" lazy="loaded"></a>
+							<div data-v-4af873a2="" class="info-content">
+								<p data-v-4af873a2="" class="medium-txt"><a data-v-4af873a2="" href="/app/rank/appid/998790080/country/cn" target="_blank">凯叔讲故事—儿童早教启蒙睡前故事大全</a></p>
+							</div>
+						</div>
+					</div>
+					<div data-v-4af873a2="" class="ivu-col ivu-col-span-5 right-item" style="padding-left: 16px; padding-right: 16px;">
+						<div data-v-4af873a2="" class="row-rank-item">
+							<!---->
+							<!---->
+							<!---->
+						</div>
+					</div>
+				</div>
+			</li>
+			<li data-v-4af873a2="" class="child-item">
+				<div data-v-4af873a2="" class="ivu-row">
+					<div data-v-4af873a2="" class="ivu-col ivu-col-span-3 left-item" style="padding-left: 16px; padding-right: 16px;"><h2 data-v-4af873a2="" class="index-6">6</h2></div>
+					<div data-v-4af873a2="" class="ivu-col ivu-col-span-16 center-item" style="padding-left: 16px; padding-right: 16px;">
+						<div data-v-4af873a2="" class="app-info"><a data-v-4af873a2="" href="/app/rank/appid/990142347/country/cn" target="_blank"><img data-v-4af873a2="" alt="KaDa故事-儿童睡前故事绘本大全" class="icon"
+									data-src="https://is4-ssl.mzstatic.com/image/thumb/Purple113/v4/c2/1c/8c/c21c8cd0-a08b-9e1b-b66a-9fa97cdf9e4a/source/100x100bb.jpg"
+									src="https://is4-ssl.mzstatic.com/image/thumb/Purple113/v4/c2/1c/8c/c21c8cd0-a08b-9e1b-b66a-9fa97cdf9e4a/source/100x100bb.jpg" lazy="loaded"></a>
+							<div data-v-4af873a2="" class="info-content">
+								<p data-v-4af873a2="" class="medium-txt"><a data-v-4af873a2="" href="/app/rank/appid/990142347/country/cn" target="_blank">KaDa故事-儿童睡前故事绘本大全</a></p>
+							</div>
+						</div>
+					</div>
+					<div data-v-4af873a2="" class="ivu-col ivu-col-span-5 right-item" style="padding-left: 16px; padding-right: 16px;">
+						<div data-v-4af873a2="" class="row-rank-item"><span data-v-4af873a2="" title="相比昨日总榜榜上升2" class="up-item"><span data-v-4af873a2="" class="rank-arrow"><i data-v-4af873a2="" class="ivu-icon ivu-icon-arrow-up-b"></i></span><span
+									data-v-4af873a2="" class="change-text"></span></span>
+							<!---->
+							<!---->
+						</div>
+					</div>
+				</div>
+			</li>
+			<li data-v-4af873a2="" class="child-item">
+				<div data-v-4af873a2="" class="ivu-row">
+					<div data-v-4af873a2="" class="ivu-col ivu-col-span-3 left-item" style="padding-left: 16px; padding-right: 16px;"><h2 data-v-4af873a2="" class="index-7">7</h2></div>
+					<div data-v-4af873a2="" class="ivu-col ivu-col-span-16 center-item" style="padding-left: 16px; padding-right: 16px;">
+						<div data-v-4af873a2="" class="app-info"><a data-v-4af873a2="" href="/app/rank/appid/1006637877/country/cn" target="_blank"><img data-v-4af873a2="" alt="儿歌点点 - 全球儿童动画精选早教儿歌故事" class="icon"
+									data-src="https://is2-ssl.mzstatic.com/image/thumb/Purple123/v4/cd/63/20/cd6320ea-5a83-445a-2e0e-b5339d49f19d/AppIcon-0-1x_U007emarketing-0-0-85-220-7.png/180x180bb.png"
+									src="https://is2-ssl.mzstatic.com/image/thumb/Purple123/v4/cd/63/20/cd6320ea-5a83-445a-2e0e-b5339d49f19d/AppIcon-0-1x_U007emarketing-0-0-85-220-7.png/180x180bb.png" lazy="loaded"></a>
+							<div data-v-4af873a2="" class="info-content">
+								<p data-v-4af873a2="" class="medium-txt"><a data-v-4af873a2="" href="/app/rank/appid/1006637877/country/cn" target="_blank">儿歌点点 - 全球儿童动画精选早教儿歌故事</a></p>
+							</div>
+						</div>
+					</div>
+					<div data-v-4af873a2="" class="ivu-col ivu-col-span-5 right-item" style="padding-left: 16px; padding-right: 16px;">
+						<div data-v-4af873a2="" class="row-rank-item">
+							<!----><span data-v-4af873a2="" title="相比昨日总榜榜下降1" class="down-item"><span data-v-4af873a2="" class="rank-arrow"><i data-v-4af873a2="" class="ivu-icon ivu-icon-arrow-down-b"></i></span><span data-v-4af873a2=""
+									class="change-text"></span></span>
+							<!---->
+						</div>
+					</div>
+				</div>
+			</li>
+			<li data-v-4af873a2="" class="child-item">
+				<div data-v-4af873a2="" class="ivu-row">
+					<div data-v-4af873a2="" class="ivu-col ivu-col-span-3 left-item" style="padding-left: 16px; padding-right: 16px;"><h2 data-v-4af873a2="" class="index-8">8</h2></div>
+					<div data-v-4af873a2="" class="ivu-col ivu-col-span-16 center-item" style="padding-left: 16px; padding-right: 16px;">
+						<div data-v-4af873a2="" class="app-info"><a data-v-4af873a2="" href="/app/rank/appid/1462397533/country/cn" target="_blank"><img data-v-4af873a2="" alt="KidsFruitLearning" class="icon"
+									data-src="https://is1-ssl.mzstatic.com/image/thumb/Purple123/v4/e1/c9/13/e1c913bc-fc21-b584-7dd2-cb02e241b022/source/100x100bb.jpg"
+									src="https://is1-ssl.mzstatic.com/image/thumb/Purple123/v4/e1/c9/13/e1c913bc-fc21-b584-7dd2-cb02e241b022/source/100x100bb.jpg" lazy="loaded"></a>
+							<div data-v-4af873a2="" class="info-content">
+								<p data-v-4af873a2="" class="medium-txt"><a data-v-4af873a2="" href="/app/rank/appid/1462397533/country/cn" target="_blank">KidsFruitLearning</a></p>
+							</div>
+						</div>
+					</div>
+					<div data-v-4af873a2="" class="ivu-col ivu-col-span-5 right-item" style="padding-left: 16px; padding-right: 16px;">
+						<div data-v-4af873a2="" class="row-rank-item">
+							<!----><span data-v-4af873a2="" title="相比昨日总榜榜下降6" class="down-item"><span data-v-4af873a2="" class="rank-arrow"><i data-v-4af873a2="" class="ivu-icon ivu-icon-arrow-down-b"></i></span><span data-v-4af873a2=""
+									class="change-text"></span></span>
+							<!---->
+						</div>
+					</div>
+				</div>
+			</li>
+			<li data-v-4af873a2="" class="child-item">
+				<div data-v-4af873a2="" class="ivu-row">
+					<div data-v-4af873a2="" class="ivu-col ivu-col-span-3 left-item" style="padding-left: 16px; padding-right: 16px;"><h2 data-v-4af873a2="" class="index-9">9</h2></div>
+					<div data-v-4af873a2="" class="ivu-col ivu-col-span-16 center-item" style="padding-left: 16px; padding-right: 16px;">
+						<div data-v-4af873a2="" class="app-info"><a data-v-4af873a2="" href="/app/rank/appid/555615190/country/cn" target="_blank"><img data-v-4af873a2="" alt="小伴龙-儿童早教启蒙儿童教育" class="icon"
+									data-src="https://is4-ssl.mzstatic.com/image/thumb/Purple113/v4/24/84/c4/2484c4c4-1263-9634-2a29-656b479dd721/source/100x100bb.jpg"
+									src="https://is4-ssl.mzstatic.com/image/thumb/Purple113/v4/24/84/c4/2484c4c4-1263-9634-2a29-656b479dd721/source/100x100bb.jpg" lazy="loaded"></a>
+							<div data-v-4af873a2="" class="info-content">
+								<p data-v-4af873a2="" class="medium-txt"><a data-v-4af873a2="" href="/app/rank/appid/555615190/country/cn" target="_blank">小伴龙-儿童早教启蒙儿童教育</a></p>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</li>
+			<li data-v-4af873a2="" class="child-item">
+				<div data-v-4af873a2="" class="ivu-row">
+					<div data-v-4af873a2="" class="ivu-col ivu-col-span-3 left-item" style="padding-left: 16px; padding-right: 16px;"><h2 data-v-4af873a2="" class="index-10">10</h2></div>
+					<div data-v-4af873a2="" class="ivu-col ivu-col-span-16 center-item" style="padding-left: 16px; padding-right: 16px;">
+						<div data-v-4af873a2="" class="app-info"><a data-v-4af873a2="" href="/app/rank/appid/1139733348/country/cn" target="_blank"><img data-v-4af873a2="" alt="洪恩识字 - 宇宙护卫队陪娃学汉字看绘本" class="icon"
+									data-src="https://is5-ssl.mzstatic.com/image/thumb/Purple123/v4/8c/5b/7e/8c5b7ea9-6cc6-7f99-f51d-23cbc7a95cc7/source/100x100bb.jpg"
+									src="https://is5-ssl.mzstatic.com/image/thumb/Purple123/v4/8c/5b/7e/8c5b7ea9-6cc6-7f99-f51d-23cbc7a95cc7/source/100x100bb.jpg" lazy="loaded"></a>
+							<div data-v-4af873a2="" class="info-content">
+								<p data-v-4af873a2="" class="medium-txt"><a data-v-4af873a2="" href="/app/rank/appid/1139733348/country/cn" target="_blank">洪恩识字 - 宇宙护卫队陪娃学汉字看绘本</a></p>
+
+							</div>
+						</div>
+					</div>
+			</li>
+		</ul>
+		<!---->
+		<a href="#headline" class="current">Home</a>
+	</div>
+
+<HR style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="80%"SIZE=1>
+
+		<div id="skillApp" class="outsideframe">
+			<h1>Top skill apps</h1>
+
+			<li data-v-4af873a2="" class="child-item">
+				<div data-v-4af873a2="" class="ivu-row">
+					<div data-v-4af873a2="" class="ivu-col ivu-col-span-3 left-item" style="padding-left: 16px; padding-right: 16px;">
+					<h2 data-v-4af873a2="" class="index-1">1</h2>
+					</div>
+					<div data-v-4af873a2="" class="ivu-col ivu-col-span-16 center-item" style="padding-left: 16px; padding-right: 16px;">
+						<div data-v-4af873a2="" class="app-info"><a data-v-4af873a2="" href="/app/rank/appid/928864273/country/cn" target="_blank"><img data-v-4af873a2="" alt="叽里呱啦-专注儿童英语早教启蒙" class="icon"
+									data-src="https://is2-ssl.mzstatic.com/image/thumb/Purple113/v4/dc/55/ad/dc55ad94-4120-035d-0ea5-4e9f708e2190/source/100x100bb.jpg"
+									src="https://is2-ssl.mzstatic.com/image/thumb/Purple113/v4/dc/55/ad/dc55ad94-4120-035d-0ea5-4e9f708e2190/source/100x100bb.jpg" lazy="loaded"></a>
+							<div data-v-4af873a2="" class="info-content">
+								<p data-v-4af873a2="" class="medium-txt"><a data-v-4af873a2="" href="/app/rank/appid/928864273/country/cn" target="_blank">叽里呱啦-专注儿童英语早教启蒙</a></p>
+							</div>
+						</div>
+					</div>
+						</div>
+						</li>
+
+		<li data-v-4af873a2="" class="child-item">
+			<div data-v-4af873a2="" class="ivu-row">
+				<div data-v-4af873a2="" class="ivu-col ivu-col-span-3 left-item" style="padding-left: 16px; padding-right: 16px;"><h2 data-v-4af873a2="" class="index-8">8</h2></div>
+				<div data-v-4af873a2="" class="ivu-col ivu-col-span-16 center-item" style="padding-left: 16px; padding-right: 16px;">
+					<div data-v-4af873a2="" class="app-info"><a data-v-4af873a2="" href="/app/rank/appid/1462397533/country/cn" target="_blank"><img data-v-4af873a2="" alt="KidsFruitLearning" class="icon"
+								data-src="https://is1-ssl.mzstatic.com/image/thumb/Purple123/v4/e1/c9/13/e1c913bc-fc21-b584-7dd2-cb02e241b022/source/100x100bb.jpg"
+								src="https://is1-ssl.mzstatic.com/image/thumb/Purple123/v4/e1/c9/13/e1c913bc-fc21-b584-7dd2-cb02e241b022/source/100x100bb.jpg" lazy="loaded"></a>
+						<div data-v-4af873a2="" class="info-content">
+							<p data-v-4af873a2="" class="medium-txt"><a data-v-4af873a2="" href="/app/rank/appid/1462397533/country/cn" target="_blank">KidsFruitLearning</a></p>
+						</div>
+					</div>
+				</div>
+				<div data-v-4af873a2="" class="ivu-col ivu-col-span-5 right-item" style="padding-left: 16px; padding-right: 16px;">
+					<div data-v-4af873a2="" class="row-rank-item">
+						<!----><span data-v-4af873a2="" title="相比昨日总榜榜下降6" class="down-item"><span data-v-4af873a2="" class="rank-arrow"><i data-v-4af873a2="" class="ivu-icon ivu-icon-arrow-down-b"></i></span><span data-v-4af873a2=""
+								class="change-text"></span></span>
+						<!---->
+					</div>
+				</div>
+			</div>
+		</li>
+
+<a href="#headline" class="current">Home</a>
+		<HR style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="80%"SIZE=1>
+		<div id="contentApp">
+			<h1>Top content apps</h1>
+
+						<li data-v-4af873a2="" class="child-item">
+							<div data-v-4af873a2="" class="ivu-row">
+								<div data-v-4af873a2="" class="ivu-col ivu-col-span-3 left-item" style="padding-left: 16px; padding-right: 16px;"><h2 data-v-4af873a2="" class="index-2">2</h2></div>
+								<div data-v-4af873a2="" class="ivu-col ivu-col-span-16 center-item" style="padding-left: 16px; padding-right: 16px;">
+									<div data-v-4af873a2="" class="app-info"><a data-v-4af873a2="" href="/app/rank/appid/1203189645/country/cn" target="_blank"><img data-v-4af873a2="" alt="伴鱼绘本-少儿英语配音儿童故事大全" class="icon"
+												data-src="https://is2-ssl.mzstatic.com/image/thumb/Purple113/v4/20/02/19/20021918-c0a1-8863-cc0a-92252cca0112/AppIcon-1x_U007emarketing-85-220-6.jpeg/180x180bb.png"
+												src="https://is2-ssl.mzstatic.com/image/thumb/Purple113/v4/20/02/19/20021918-c0a1-8863-cc0a-92252cca0112/AppIcon-1x_U007emarketing-85-220-6.jpeg/180x180bb.png" lazy="loaded"></a>
+										<div data-v-4af873a2="" class="info-content">
+											<p data-v-4af873a2="" class="medium-txt"><a data-v-4af873a2="" href="/app/rank/appid/1203189645/country/cn" target="_blank">伴鱼绘本-少儿英语配音儿童故事大全</a></p>
+										</div>
+									</div>
+								</div>
+
+								<div data-v-4af873a2="" class="ivu-col ivu-col-span-5 right-item" style="padding-left: 16px; padding-right: 16px;">
+									<div data-v-4af873a2="" class="row-rank-item"><span data-v-4af873a2="" title="相比昨日总榜榜上升2" class="up-item"><span data-v-4af873a2="" class="rank-arrow"><i data-v-4af873a2="" class="ivu-icon ivu-icon-arrow-up-b"></i></span><span
+												data-v-4af873a2="" class="change-text"></span></span>
+										<!---->
+										<!---->
+									</div>
+								</div>
+
+							</div>
+						</li>
+						<li data-v-4af873a2="" class="child-item">
+							<div data-v-4af873a2="" class="ivu-row">
+								<div data-v-4af873a2="" class="ivu-col ivu-col-span-3 left-item" style="padding-left: 16px; padding-right: 16px;"><h2 data-v-4af873a2="" class="index-3">3</h2></div>
+								<div data-v-4af873a2="" class="ivu-col ivu-col-span-16 center-item" style="padding-left: 16px; padding-right: 16px;">
+									<div data-v-4af873a2="" class="app-info"><a data-v-4af873a2="" href="/app/rank/appid/1278795670/country/cn" target="_blank"><img data-v-4af873a2="" alt="宝宝巴士儿歌-学前经典儿歌和故事" class="icon"
+												data-src="https://is5-ssl.mzstatic.com/image/thumb/Purple123/v4/b9/a1/8a/b9a18a9d-eeab-8791-8161-319135e9c41e/source/100x100bb.jpg"
+												src="https://is5-ssl.mzstatic.com/image/thumb/Purple123/v4/b9/a1/8a/b9a18a9d-eeab-8791-8161-319135e9c41e/source/100x100bb.jpg" lazy="loaded"></a>
+										<div data-v-4af873a2="" class="info-content">
+											<p data-v-4af873a2="" class="medium-txt"><a data-v-4af873a2="" href="/app/rank/appid/1278795670/country/cn" target="_blank">宝宝巴士儿歌-学前经典儿歌和故事</a></p>
+										</div>
+									</div>
+								</div>
+								<div data-v-4af873a2="" class="ivu-col ivu-col-span-5 right-item" style="padding-left: 16px; padding-right: 16px;">
+									<div data-v-4af873a2="" class="row-rank-item">
+										<!---->
+										<!---->
+										<!---->
+									</div>
+								</div>
+							</div>
+						</li>
+						<li data-v-4af873a2="" class="child-item">
+							<div data-v-4af873a2="" class="ivu-row">
+								<div data-v-4af873a2="" class="ivu-col ivu-col-span-3 left-item" style="padding-left: 16px; padding-right: 16px;"><h2 data-v-4af873a2="" class="index-4">4</h2></div>
+								<div data-v-4af873a2="" class="ivu-col ivu-col-span-16 center-item" style="padding-left: 16px; padding-right: 16px;">
+									<div data-v-4af873a2="" class="app-info"><a data-v-4af873a2="" href="/app/rank/appid/894495836/country/cn" target="_blank"><img data-v-4af873a2="" alt="儿歌多多-听故事看动画片玩游戏" class="icon"
+												data-src="https://is4-ssl.mzstatic.com/image/thumb/Purple113/v4/4e/a9/81/4ea98184-0bd9-47af-873a-e3a84d60cc80/source/100x100bb.jpg"
+												src="https://is4-ssl.mzstatic.com/image/thumb/Purple113/v4/4e/a9/81/4ea98184-0bd9-47af-873a-e3a84d60cc80/source/100x100bb.jpg" lazy="loaded"></a>
+										<div data-v-4af873a2="" class="info-content">
+											<p data-v-4af873a2="" class="medium-txt"><a data-v-4af873a2="" href="/app/rank/appid/894495836/country/cn" target="_blank">儿歌多多-听故事看动画片玩游戏</a></p>
+										</div>
+									</div>
+								</div>
+								<div data-v-4af873a2="" class="ivu-col ivu-col-span-5 right-item" style="padding-left: 16px; padding-right: 16px;">
+									<div data-v-4af873a2="" class="row-rank-item"><span data-v-4af873a2="" title="相比昨日总榜榜上升3" class="up-item"><span data-v-4af873a2="" class="rank-arrow"><i data-v-4af873a2="" class="ivu-icon ivu-icon-arrow-up-b"></i></span><span
+												data-v-4af873a2="" class="change-text"></span></span>
+										<!---->
+										<!---->
+									</div>
+								</div>
+							</div>
+						</li>
+						<li data-v-4af873a2="" class="child-item">
+							<div data-v-4af873a2="" class="ivu-row">
+								<div data-v-4af873a2="" class="ivu-col ivu-col-span-3 left-item" style="padding-left: 16px; padding-right: 16px;"><h2 data-v-4af873a2="" class="index-5">5</h2></div>
+								<div data-v-4af873a2="" class="ivu-col ivu-col-span-16 center-item" style="padding-left: 16px; padding-right: 16px;">
+									<div data-v-4af873a2="" class="app-info"><a data-v-4af873a2="" href="/app/rank/appid/998790080/country/cn" target="_blank"><img data-v-4af873a2="" alt="凯叔讲故事—儿童早教启蒙睡前故事大全" class="icon"
+												data-src="https://is4-ssl.mzstatic.com/image/thumb/Purple113/v4/ba/57/34/ba573425-ffcc-bd2a-a243-a6c4534308b9/source/100x100bb.jpg"
+												src="https://is4-ssl.mzstatic.com/image/thumb/Purple113/v4/ba/57/34/ba573425-ffcc-bd2a-a243-a6c4534308b9/source/100x100bb.jpg" lazy="loaded"></a>
+										<div data-v-4af873a2="" class="info-content">
+											<p data-v-4af873a2="" class="medium-txt"><a data-v-4af873a2="" href="/app/rank/appid/998790080/country/cn" target="_blank">凯叔讲故事—儿童早教启蒙睡前故事大全</a></p>
+										</div>
+									</div>
+								</div>
+								<div data-v-4af873a2="" class="ivu-col ivu-col-span-5 right-item" style="padding-left: 16px; padding-right: 16px;">
+									<div data-v-4af873a2="" class="row-rank-item">
+										<!---->
+										<!---->
+										<!---->
+									</div>
+								</div>
+							</div>
+						</li>
+						<li data-v-4af873a2="" class="child-item">
+							<div data-v-4af873a2="" class="ivu-row">
+								<div data-v-4af873a2="" class="ivu-col ivu-col-span-3 left-item" style="padding-left: 16px; padding-right: 16px;"><h2 data-v-4af873a2="" class="index-6">6</h2></div>
+								<div data-v-4af873a2="" class="ivu-col ivu-col-span-16 center-item" style="padding-left: 16px; padding-right: 16px;">
+									<div data-v-4af873a2="" class="app-info"><a data-v-4af873a2="" href="/app/rank/appid/990142347/country/cn" target="_blank"><img data-v-4af873a2="" alt="KaDa故事-儿童睡前故事绘本大全" class="icon"
+												data-src="https://is4-ssl.mzstatic.com/image/thumb/Purple113/v4/c2/1c/8c/c21c8cd0-a08b-9e1b-b66a-9fa97cdf9e4a/source/100x100bb.jpg"
+												src="https://is4-ssl.mzstatic.com/image/thumb/Purple113/v4/c2/1c/8c/c21c8cd0-a08b-9e1b-b66a-9fa97cdf9e4a/source/100x100bb.jpg" lazy="loaded"></a>
+										<div data-v-4af873a2="" class="info-content">
+											<p data-v-4af873a2="" class="medium-txt"><a data-v-4af873a2="" href="/app/rank/appid/990142347/country/cn" target="_blank">KaDa故事-儿童睡前故事绘本大全</a></p>
+										</div>
+									</div>
+								</div>
+								<div data-v-4af873a2="" class="ivu-col ivu-col-span-5 right-item" style="padding-left: 16px; padding-right: 16px;">
+									<div data-v-4af873a2="" class="row-rank-item"><span data-v-4af873a2="" title="相比昨日总榜榜上升2" class="up-item"><span data-v-4af873a2="" class="rank-arrow"><i data-v-4af873a2="" class="ivu-icon ivu-icon-arrow-up-b"></i></span><span
+												data-v-4af873a2="" class="change-text"></span></span>
+										<!---->
+										<!---->
+									</div>
+								</div>
+							</div>
+						</li>
+						<li data-v-4af873a2="" class="child-item">
+							<div data-v-4af873a2="" class="ivu-row">
+								<div data-v-4af873a2="" class="ivu-col ivu-col-span-3 left-item" style="padding-left: 16px; padding-right: 16px;"><h2 data-v-4af873a2="" class="index-7">7</h2></div>
+								<div data-v-4af873a2="" class="ivu-col ivu-col-span-16 center-item" style="padding-left: 16px; padding-right: 16px;">
+									<div data-v-4af873a2="" class="app-info"><a data-v-4af873a2="" href="/app/rank/appid/1006637877/country/cn" target="_blank"><img data-v-4af873a2="" alt="儿歌点点 - 全球儿童动画精选早教儿歌故事" class="icon"
+												data-src="https://is2-ssl.mzstatic.com/image/thumb/Purple123/v4/cd/63/20/cd6320ea-5a83-445a-2e0e-b5339d49f19d/AppIcon-0-1x_U007emarketing-0-0-85-220-7.png/180x180bb.png"
+												src="https://is2-ssl.mzstatic.com/image/thumb/Purple123/v4/cd/63/20/cd6320ea-5a83-445a-2e0e-b5339d49f19d/AppIcon-0-1x_U007emarketing-0-0-85-220-7.png/180x180bb.png" lazy="loaded"></a>
+										<div data-v-4af873a2="" class="info-content">
+											<p data-v-4af873a2="" class="medium-txt"><a data-v-4af873a2="" href="/app/rank/appid/1006637877/country/cn" target="_blank">儿歌点点 - 全球儿童动画精选早教儿歌故事</a></p>
+										</div>
+									</div>
+								</div>
+								<div data-v-4af873a2="" class="ivu-col ivu-col-span-5 right-item" style="padding-left: 16px; padding-right: 16px;">
+									<div data-v-4af873a2="" class="row-rank-item">
+										<!----><span data-v-4af873a2="" title="相比昨日总榜榜下降1" class="down-item"><span data-v-4af873a2="" class="rank-arrow"><i data-v-4af873a2="" class="ivu-icon ivu-icon-arrow-down-b"></i></span><span data-v-4af873a2=""
+												class="change-text"></span></span>
+										<!---->
+									</div>
+								</div>
+							</div>
+						</li>
+
+		</div>
+
+<a href="#headline" class="current">Home</a>
+<HR style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="80%"SIZE=1>
+		<div id="functionApp">
+			<h1>Top function apps</h1>
+
+			<li data-v-4af873a2="" class="child-item">
+		<div data-v-4af873a2="" class="ivu-row">
+			<div data-v-4af873a2="" class="ivu-col ivu-col-span-3 left-item" style="padding-left: 16px; padding-right: 16px;"><h2 data-v-4af873a2="" class="index-2">2</h2></div>
+			<div data-v-4af873a2="" class="ivu-col ivu-col-span-16 center-item" style="padding-left: 16px; padding-right: 16px;">
+				<div data-v-4af873a2="" class="app-info"><a data-v-4af873a2="" href="/app/rank/appid/491024740/country/cn" target="_blank"><img data-v-4af873a2="" alt="驾考宝典-驾考学车驾校考驾照宝典" class="icon"
+							data-src="https://is4-ssl.mzstatic.com/image/thumb/Purple123/v4/f3/60/c3/f360c36b-2feb-c07c-7b4e-6375e564662f/source/100x100bb.jpg"
+							src="https://is4-ssl.mzstatic.com/image/thumb/Purple123/v4/f3/60/c3/f360c36b-2feb-c07c-7b4e-6375e564662f/source/100x100bb.jpg" lazy="loaded"></a>
+					<div data-v-4af873a2="" class="info-content">
+						<p data-v-4af873a2="" class="medium-txt"><a data-v-4af873a2="" href="/app/rank/appid/491024740/country/cn" target="_blank">驾考宝典-驾考学车驾校考驾照宝典</a></p>
+					</div>
+				</div>
+			</div>
+			<div data-v-4af873a2="" class="ivu-col ivu-col-span-5 right-item" style="padding-left: 16px; padding-right: 16px;">
+
+			</div>
+		</div>
+	</li>
+
+
+<li data-v-4af873a2="" class="child-item">
+	<div data-v-4af873a2="" class="ivu-row">
+		<div data-v-4af873a2="" class="ivu-col ivu-col-span-3 left-item" style="padding-left: 16px; padding-right: 16px;"><h2 data-v-4af873a2="" class="index-5">5</h2></div>
+		<div data-v-4af873a2="" class="ivu-col ivu-col-span-16 center-item" style="padding-left: 16px; padding-right: 16px;">
+			<div data-v-4af873a2="" class="app-info"><a data-v-4af873a2="" href="/app/rank/appid/803781859/country/cn" target="_blank"><img data-v-4af873a2="" alt="作业帮-中小学搜题答疑辅导利器" class="icon"
+						data-src="https://is3-ssl.mzstatic.com/image/thumb/Purple123/v4/a5/08/80/a508803b-bce0-51a5-d503-1b79b22c070c/source/100x100bb.jpg"
+						src="https://is3-ssl.mzstatic.com/image/thumb/Purple123/v4/a5/08/80/a508803b-bce0-51a5-d503-1b79b22c070c/source/100x100bb.jpg" lazy="loaded"></a>
+				<div data-v-4af873a2="" class="info-content">
+					<p data-v-4af873a2="" class="medium-txt"><a data-v-4af873a2="" href="/app/rank/appid/803781859/country/cn" target="_blank">作业帮-中小学搜题答疑辅导利器</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</li>
+
+<li data-v-4af873a2="" class="child-item">
+	<div data-v-4af873a2="" class="ivu-row">
+		<div data-v-4af873a2="" class="ivu-col ivu-col-span-3 left-item" style="padding-left: 16px; padding-right: 16px;"><h2 data-v-4af873a2="" class="index-7">7</h2></div>
+		<div data-v-4af873a2="" class="ivu-col ivu-col-span-16 center-item" style="padding-left: 16px; padding-right: 16px;">
+			<div data-v-4af873a2="" class="app-info"><a data-v-4af873a2="" href="/app/rank/appid/426340811/country/cn" target="_blank"><img data-v-4af873a2="" alt="百度文库-考试辅导作业题库大全" class="icon"
+						data-src="https://is5-ssl.mzstatic.com/image/thumb/Purple113/v4/fa/71/f9/fa71f9a3-b27e-7c92-d9d1-1922b6adfb5f/source/100x100bb.jpg"
+						src="https://is5-ssl.mzstatic.com/image/thumb/Purple113/v4/fa/71/f9/fa71f9a3-b27e-7c92-d9d1-1922b6adfb5f/source/100x100bb.jpg" lazy="loaded"></a>
+				<div data-v-4af873a2="" class="info-content">
+					<p data-v-4af873a2="" class="medium-txt"><a data-v-4af873a2="" href="/app/rank/appid/426340811/country/cn" target="_blank">百度文库-考试辅导作业题库大全</a></p>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</li>
+
+
+		</div>
+
+
+
+<a href="#headline" class="current">Home</a>
+<HR style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="80%"SIZE=1>
+		<div id="experienceApp">
+			<h1>Top experience apps</h1>
+<li data-v-4af873a2="" class="child-item">
+	<div data-v-4af873a2="" class="ivu-row">
+		<div data-v-4af873a2="" class="ivu-col ivu-col-span-3 left-item"><span data-v-4af873a2="" class="index-30">30</span></div>
+		<div data-v-4af873a2="" class="ivu-col ivu-col-span-16 center-item">
+			<div data-v-4af873a2="" class="app-info"><a data-v-4af873a2="" href="/app/rank/appid/1160733919/country/cn" target="_blank"><img data-v-4af873a2="" alt="宝宝地震安全-科学普及地震知识" class="icon"
+						data-src="https://is4-ssl.mzstatic.com/image/thumb/Purple128/v4/03/94/ed/0394ed57-df4b-8e17-6215-156c352e52b8/source/100x100bb.jpg"
+						src="https://is4-ssl.mzstatic.com/image/thumb/Purple128/v4/03/94/ed/0394ed57-df4b-8e17-6215-156c352e52b8/source/100x100bb.jpg" lazy="loaded"></a>
+				<div data-v-4af873a2="" class="info-content">
+					<p data-v-4af873a2="" class="medium-txt"><a data-v-4af873a2="" href="/app/rank/appid/1160733919/country/cn" target="_blank">宝宝地震安全-科学普及地震知识</a></p>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</li>
+
+<li data-v-4af873a2="" class="child-item">
+	<div data-v-4af873a2="" class="ivu-row">
+		<div data-v-4af873a2="" class="ivu-col ivu-col-span-3 left-item"><span data-v-4af873a2="" class="index-41">41</span></div>
+		<div data-v-4af873a2="" class="ivu-col ivu-col-span-16 center-item">
+			<div data-v-4af873a2="" class="app-info"><a data-v-4af873a2="" href="/app/rank/appid/883933533/country/cn" target="_blank"><img data-v-4af873a2="" alt="宝宝小船长-化身船长体验航海小游戏" class="icon"
+						data-src="https://is2-ssl.mzstatic.com/image/thumb/Purple62/v4/7f/31/c9/7f31c9a4-87ee-c404-7ca4-7bc24b6bc641/source/100x100bb.jpg"
+						src="https://is2-ssl.mzstatic.com/image/thumb/Purple62/v4/7f/31/c9/7f31c9a4-87ee-c404-7ca4-7bc24b6bc641/source/100x100bb.jpg" lazy="loaded"></a>
+				<div data-v-4af873a2="" class="info-content">
+					<p data-v-4af873a2="" class="medium-txt"><a data-v-4af873a2="" href="/app/rank/appid/883933533/country/cn" target="_blank">宝宝小船长-化身船长体验航海小游戏</a></p>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</li>
+
+
+
+
+
+
+		</div>
+
+<a href="#headline" class="current">Home</a>
+<HR style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="80%"SIZE=1>
+		<div id="comprehensiveApp">
+			<h1>Top comprehensive apps</h1>
+			<li data-v-4af873a2="" class="child-item">
+				<div data-v-4af873a2="" class="ivu-row">
+					<div data-v-4af873a2="" class="ivu-col ivu-col-span-3 left-item" style="padding-left: 16px; padding-right: 16px;"><h2 data-v-4af873a2="" class="index-9">9</h2></div>
+					<div data-v-4af873a2="" class="ivu-col ivu-col-span-16 center-item" style="padding-left: 16px; padding-right: 16px;">
+						<div data-v-4af873a2="" class="app-info"><a data-v-4af873a2="" href="/app/rank/appid/555615190/country/cn" target="_blank"><img data-v-4af873a2="" alt="小伴龙-儿童早教启蒙儿童教育" class="icon"
+									data-src="https://is4-ssl.mzstatic.com/image/thumb/Purple113/v4/24/84/c4/2484c4c4-1263-9634-2a29-656b479dd721/source/100x100bb.jpg"
+									src="https://is4-ssl.mzstatic.com/image/thumb/Purple113/v4/24/84/c4/2484c4c4-1263-9634-2a29-656b479dd721/source/100x100bb.jpg" lazy="loaded"></a>
+							<div data-v-4af873a2="" class="info-content">
+								<p data-v-4af873a2="" class="medium-txt"><a data-v-4af873a2="" href="/app/rank/appid/555615190/country/cn" target="_blank">小伴龙-儿童早教启蒙儿童教育</a></p>
+							</div>
+						</div>
+					</div>
+					<div data-v-4af873a2="" class="ivu-col ivu-col-span-5 right-item" style="padding-left: 16px; padding-right: 16px;">
+						<div data-v-4af873a2="" class="row-rank-item">
+							<!---->
+							<!---->
+							<!---->
+						</div>
+					</div>
+				</div>
+			</li>
+
+<li data-v-4af873a2="" class="child-item">
+	<div data-v-4af873a2="" class="ivu-row">
+		<div data-v-4af873a2="" class="ivu-col ivu-col-span-3 left-item" style="padding-left: 16px; padding-right: 16px;"><span data-v-4af873a2="" class="index-18">18</span></div>
+		<div data-v-4af873a2="" class="ivu-col ivu-col-span-16 center-item" style="padding-left: 16px; padding-right: 16px;">
+			<div data-v-4af873a2="" class="app-info"><a data-v-4af873a2="" href="/app/rank/appid/796333129/country/cn" target="_blank"><img data-v-4af873a2="" alt="熊猫博士餐厅 2 - 儿童早教益智游戏" class="icon"
+						data-src="https://is1-ssl.mzstatic.com/image/thumb/Purple114/v4/a1/5f/68/a15f68e8-9ad4-eac1-0bb3-f2c296bccc35/source/100x100bb.jpg"
+						src="https://is1-ssl.mzstatic.com/image/thumb/Purple114/v4/a1/5f/68/a15f68e8-9ad4-eac1-0bb3-f2c296bccc35/source/100x100bb.jpg" lazy="loaded"></a>
+				<div data-v-4af873a2="" class="info-content">
+					<p data-v-4af873a2="" class="medium-txt"><a data-v-4af873a2="" href="/app/rank/appid/796333129/country/cn" target="_blank">熊猫博士餐厅 2 - 儿童早教益智游戏</a></p>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</li>
+		</div>
+<a href="#headline" class="current">Home</a>
+
+<HR style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="80%"SIZE=1>
+	<div id="JapanApp" class="outsideframe">
+		<h1>Top Japanese apps</h1>
+
+
+<li data-v-4af873a2="" class="child-item">
+	<div data-v-4af873a2="" class="ivu-row">
+		<div data-v-4af873a2="" class="ivu-col ivu-col-span-3 left-item" style="padding-left: 16px; padding-right: 16px;"><span data-v-4af873a2="" class="index-1">1</span></div>
+		<div data-v-4af873a2="" class="ivu-col ivu-col-span-16 center-item" style="padding-left: 16px; padding-right: 16px;">
+			<div data-v-4af873a2="" class="app-info"><a data-v-4af873a2="" href="/app/rank/appid/1241122788/country/jp" target="_blank"><img data-v-4af873a2="" alt="クレヨンしんちゃん お手伝い大作戦" class="icon" data-src="https://is3-ssl.mzstatic.com/image/thumb/Purple113/v4/28/69/78/2869786f-fdff-6cd5-05e1-1e558c407b5a/source/100x100bb.jpg" src="https://is3-ssl.mzstatic.com/image/thumb/Purple113/v4/28/69/78/2869786f-fdff-6cd5-05e1-1e558c407b5a/source/100x100bb.jpg" lazy="loaded"></a>
+				<div data-v-4af873a2="" class="info-content">
+					<p data-v-4af873a2="" class="medium-txt"><a data-v-4af873a2="" href="/app/rank/appid/1241122788/country/jp" target="_blank">クレヨンしんちゃん お手伝い大作戦</a></p>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</li>
+
+<li data-v-4af873a2="" class="child-item">
+	<div data-v-4af873a2="" class="ivu-row">
+		<div data-v-4af873a2="" class="ivu-col ivu-col-span-3 left-item" style="padding-left: 16px; padding-right: 16px;"><span data-v-4af873a2="" class="index-5">5</span></div>
+		<div data-v-4af873a2="" class="ivu-col ivu-col-span-16 center-item" style="padding-left: 16px; padding-right: 16px;">
+			<div data-v-4af873a2="" class="app-info"><a data-v-4af873a2="" href="/app/rank/appid/958023729/country/jp" target="_blank"><img data-v-4af873a2="" alt="うたって！おどって！アンパンマン" class="icon" data-src="https://is2-ssl.mzstatic.com/image/thumb/Purple128/v4/61/e8/8e/61e88e47-69ce-21ee-61e9-a218ea1c1554/source/100x100bb.jpg" src="https://is2-ssl.mzstatic.com/image/thumb/Purple128/v4/61/e8/8e/61e88e47-69ce-21ee-61e9-a218ea1c1554/source/100x100bb.jpg" lazy="loaded"></a>
+				<div data-v-4af873a2="" class="info-content">
+					<p data-v-4af873a2="" class="medium-txt"><a data-v-4af873a2="" href="/app/rank/appid/958023729/country/jp" target="_blank">うたって！おどって！アンパンマン</a></p>
+				</div>
+			</div>
+		</div>
+		<div data-v-4af873a2="" class="ivu-col ivu-col-span-5 right-item" style="padding-left: 16px; padding-right: 16px;">
+
+		</div>
+	</div>
+</li>
+
+<li data-v-4af873a2="" class="child-item">
+	<div data-v-4af873a2="" class="ivu-row">
+		<div data-v-4af873a2="" class="ivu-col ivu-col-span-3 left-item" style="padding-left: 16px; padding-right: 16px;"><span data-v-4af873a2="" class="index-9">9</span></div>
+		<div data-v-4af873a2="" class="ivu-col ivu-col-span-16 center-item" style="padding-left: 16px; padding-right: 16px;">
+			<div data-v-4af873a2="" class="app-info"><a data-v-4af873a2="" href="/app/rank/appid/952010792/country/jp" target="_blank"><img data-v-4af873a2="" alt="百人一首 初めてかるた" class="icon" data-src="https://is2-ssl.mzstatic.com/image/thumb/Purple20/v4/07/47/e2/0747e2a2-547d-7305-b527-f4e9a95527c2/source/100x100bb.jpg" src="https://is2-ssl.mzstatic.com/image/thumb/Purple20/v4/07/47/e2/0747e2a2-547d-7305-b527-f4e9a95527c2/source/100x100bb.jpg" lazy="loaded"></a>
+				<div data-v-4af873a2="" class="info-content">
+					<p data-v-4af873a2="" class="medium-txt"><a data-v-4af873a2="" href="/app/rank/appid/952010792/country/jp" target="_blank">百人一首 初めてかるた</a></p>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</li>
+	</div>
+
+	<HR style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="80%"SIZE=1>
+		<div id="USApp" class="outsideframe">
+			<h1>Top American apps</h1><li data-v-4af873a2="" class="child-item">
+	<div data-v-4af873a2="" class="ivu-row">
+		<div data-v-4af873a2="" class="ivu-col ivu-col-span-3 left-item" style="padding-left: 16px; padding-right: 16px;"><span data-v-4af873a2="" class="index-3">3</span></div>
+		<div data-v-4af873a2="" class="ivu-col ivu-col-span-16 center-item" style="padding-left: 16px; padding-right: 16px;">
+			<div data-v-4af873a2="" class="app-info"><a data-v-4af873a2="" href="/app/rank/appid/586328581/country/us" target="_blank"><img data-v-4af873a2="" alt="ABCmouse.com" class="icon" data-src="https://is4-ssl.mzstatic.com/image/thumb/Purple113/v4/af/4a/d9/af4ad992-d627-a4fb-4573-c9421103f795/source/100x100bb.jpg" src="https://is4-ssl.mzstatic.com/image/thumb/Purple113/v4/af/4a/d9/af4ad992-d627-a4fb-4573-c9421103f795/source/100x100bb.jpg" lazy="loaded"></a>
+				<div data-v-4af873a2="" class="info-content">
+					<p data-v-4af873a2="" class="medium-txt"><a data-v-4af873a2="" href="/app/rank/appid/586328581/country/us" target="_blank">ABCmouse.com</a></p>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</li>
+
+<li data-v-4af873a2="" class="child-item">
+	<div data-v-4af873a2="" class="ivu-row">
+		<div data-v-4af873a2="" class="ivu-col ivu-col-span-3 left-item" style="padding-left: 16px; padding-right: 16px;"><span data-v-4af873a2="" class="index-4">4</span></div>
+		<div data-v-4af873a2="" class="ivu-col ivu-col-span-16 center-item" style="padding-left: 16px; padding-right: 16px;">
+			<div data-v-4af873a2="" class="app-info"><a data-v-4af873a2="" href="/app/rank/appid/1223397201/country/us" target="_blank"><img data-v-4af873a2="" alt="Kiddopia - ABC Toddler Games" class="icon" data-src="https://is4-ssl.mzstatic.com/image/thumb/Purple123/v4/51/60/ae/5160aee0-f5c5-f8e7-c082-5e7343e4a42a/source/100x100bb.jpg" src="https://is4-ssl.mzstatic.com/image/thumb/Purple123/v4/51/60/ae/5160aee0-f5c5-f8e7-c082-5e7343e4a42a/source/100x100bb.jpg" lazy="loaded"></a>
+				<div data-v-4af873a2="" class="info-content">
+					<p data-v-4af873a2="" class="medium-txt"><a data-v-4af873a2="" href="/app/rank/appid/1223397201/country/us" target="_blank">Kiddopia - ABC Toddler Games</a></p>
+				</div>
+			</div>
+		</div>
+		<div data-v-4af873a2="" class="ivu-col ivu-col-span-5 right-item" style="padding-left: 16px; padding-right: 16px;">
+
+		</div>
+	</div>
+</li>
+
+<li data-v-4af873a2="" class="child-item">
+	<div data-v-4af873a2="" class="ivu-row">
+		<div data-v-4af873a2="" class="ivu-col ivu-col-span-3 left-item" style="padding-left: 16px; padding-right: 16px;"><span data-v-4af873a2="" class="index-8">8</span></div>
+		<div data-v-4af873a2="" class="ivu-col ivu-col-span-16 center-item" style="padding-left: 16px; padding-right: 16px;">
+			<div data-v-4af873a2="" class="app-info"><a data-v-4af873a2="" href="/app/rank/appid/1296796112/country/us" target="_blank"><img data-v-4af873a2="" alt="Barbie Dreamhouse Adventures" class="icon" data-src="https://is4-ssl.mzstatic.com/image/thumb/Purple123/v4/78/af/1b/78af1bce-f2f8-6fec-23e6-3749809aa954/source/100x100bb.jpg" src="https://is4-ssl.mzstatic.com/image/thumb/Purple123/v4/78/af/1b/78af1bce-f2f8-6fec-23e6-3749809aa954/source/100x100bb.jpg" lazy="loaded"></a>
+				<div data-v-4af873a2="" class="info-content">
+					<p data-v-4af873a2="" class="medium-txt"><a data-v-4af873a2="" href="/app/rank/appid/1296796112/country/us" target="_blank">Barbie Dreamhouse Adventures</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</li>
+		</div>
+
+
+		<HR style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="80%"SIZE=1>
+
+				<div id="tipsFor" class="outsideframe">
+					<h1>Tips for game developer</h1>
+					<h3>1.More rational decision-making process <br>
+2.Improved creative process and brainstorming skills <br>
+3.Having access to foreign literature, movie and internet content <br>
+4.Better understanding of foreign culture and market</h3>
+				</div>
+				<HR style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="80%"SIZE=1>
+
+<div id="resource" class="outsideframe">
+			<h1>Resources</h1>
+	<a href="https://www.commonsense.org/education/">Commonsense.org</a><br>
+		<a href="	https://www.uen.org/apps4edu/">Apps4Edu</a><br>
+			<a href="	https://www.educationalappstore.com/">EducationalAppStore</a><br>
+
+</div>
+
+	<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+		<a href="#headline" class="current">Home</a>
+			<HR style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="80%"SIZE=1>
+		<p>Can Zhang & Meining Zhu | MSTU5015 Final Project</p>
+		<!-- <p>来源：<a href="http://sc.chinaz.com/" target="_blank">站长素材</a></p> -->
+	</div>
 
 </body>
+
 
 </html>
